@@ -12,10 +12,18 @@ public class Processos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
+	@Column(columnDefinition = "TEXT")
 	private String nome;
+	
 	private String nroProcesso;
+	
+	@Column(columnDefinition = "TEXT")
 	private String descricaoCurta;
+	
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String descricaoLonga;
 	
 	
