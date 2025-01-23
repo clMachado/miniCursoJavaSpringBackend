@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.clmDev.dslist_backend.classes.Processos;
+import com.clmDev.dslist_backend.classes.ProcessosDTO;
 import com.clmDev.dslist_backend.services.ProcessoService;
 
 @RestController
@@ -18,8 +17,8 @@ public class ProcessoController {
 	private ProcessoService serv;
 	
 	@GetMapping
-	public List<Processos> findAll() {
-		List<Processos> processos =  serv.findAll();
+	public List<ProcessosDTO> findAll() {
+		List<ProcessosDTO> processos =  serv.findAll();
 		return processos;
 	}
 	
