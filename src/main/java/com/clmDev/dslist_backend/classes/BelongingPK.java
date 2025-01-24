@@ -14,14 +14,14 @@ public class BelongingPK {
 	private Processo processo;
 	
 	@ManyToOne
-	@JoinColumn(name = "list_id")
-	private ProcessoList list;
+	@JoinColumn(name = "tipo_id")
+	private TipoProcesso tipo;
 	
 	
 	
-	public BelongingPK(Processo processo, ProcessoList list) {
+	public BelongingPK(Processo processo, TipoProcesso tipo) {
 		this.processo = processo;
-		this.list = list;
+		this.tipo = tipo;
 	}
 	public BelongingPK() {
 	}
@@ -31,15 +31,15 @@ public class BelongingPK {
 	public void setProcesso(Processo processo) {
 		this.processo = processo;
 	}
-	public ProcessoList getList() {
-		return list;
+	public TipoProcesso getTipo() {
+		return tipo;
 	}
-	public void setList(ProcessoList list) {
-		this.list = list;
+	public void setTipo(TipoProcesso tipo) {
+		this.tipo = tipo;
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(list, processo);
+		return Objects.hash(tipo, processo);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -50,7 +50,7 @@ public class BelongingPK {
 		if (getClass() != obj.getClass())
 			return false;
 		BelongingPK other = (BelongingPK) obj;
-		return Objects.equals(list, other.list) && Objects.equals(processo, other.processo);
+		return Objects.equals(tipo, other.tipo) && Objects.equals(processo, other.processo);
 	}
 	
 	

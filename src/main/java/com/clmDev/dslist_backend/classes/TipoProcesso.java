@@ -9,8 +9,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_processoList")
-public class ProcessoList {
+@Table(name = "tb_tipoprocesso")
+public class TipoProcesso {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -19,11 +19,11 @@ public class ProcessoList {
 	private String nome;
 
 	
-	public ProcessoList(long id, String nome) {
+	public TipoProcesso(long id, String nome) {
 		this.id = id;
 		this.nome = nome;
 	}
-	public ProcessoList() {
+	public TipoProcesso() {
 	}
 	public long getId() {
 		return id;
@@ -49,7 +49,7 @@ public class ProcessoList {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ProcessoList other = (ProcessoList) obj;
+		TipoProcesso other = (TipoProcesso) obj;
 		return id == other.id;
 	}
 	

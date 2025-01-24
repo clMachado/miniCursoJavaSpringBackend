@@ -17,9 +17,9 @@ public class Belonging {
 	
 	private Integer position;
 
-	public Belonging(Processo processo, ProcessoList list, Integer position) {
+	public Belonging(Processo processo, TipoProcesso tipo, Integer position) {
 		this.id.setProcesso(processo);
-		this.id.setList(list);
+		this.id.setTipo(tipo);
 		this.position = position;
 	}
 	
