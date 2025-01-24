@@ -13,3 +13,9 @@ INSERT INTO tb_pessoas (nome, CPF_CNPJ, telefone, email) VALUES ('Joao Gonçalve
 INSERT INTO tb_pessoas (nome, CPF_CNPJ, telefone, email) VALUES ('Maria wilms','33333333333',    '04812333453', 'maria@gmail.com');
 INSERT INTO tb_pessoas (nome, CPF_CNPJ, telefone, email) VALUES ('Pedro hoss','22222889977', '04199999991', 'pedro@gmail.com');
 INSERT INTO tb_pessoas (nome, CPF_CNPJ, telefone, email) VALUES ('Jilia bigorna','22222299998', '04599999992', 'julia@gmail.com');
+
+INSERT INTO tb_docs(descricao, url) values('abertura do processo','http://gdoc.com.br/arq01');
+INSERT INTO tb_docs(descricao, url) values('atualizacao do processo','http://gdoc.com.br/arq02');
+INSERT INTO tb_docs(descricao, url) values('juri do processo','http://gdoc.com.br/arq03');
+INSERT INTO tb_docs(descricao, url) values('recurso do processo','http://gdoc.com.br/arq04');
+INSERT INTO tb_docs(descricao, url) values('abesc do processo','http://gdoc.com.br/arq05');
