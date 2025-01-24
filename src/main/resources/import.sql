@@ -19,3 +19,21 @@ INSERT INTO tb_docs(descricao, url) values('atualizacao do processo','http://gdo
 INSERT INTO tb_docs(descricao, url) values('juri do processo','http://gdoc.com.br/arq03');
 INSERT INTO tb_docs(descricao, url) values('recurso do processo','http://gdoc.com.br/arq04');
 INSERT INTO tb_docs(descricao, url) values('abesc do processo','http://gdoc.com.br/arq05');
+
+INSERT INTO TB_TIPOPROCESSO(nome) values('Feminicidio');
+INSERT INTO TB_TIPOPROCESSO(nome) values('Maria da penha');
+INSERT INTO TB_TIPOPROCESSO(nome) values('Roubo');
+INSERT INTO TB_TIPOPROCESSO(nome) values('Assalto');
+
+insert into TB_BELONGING(tipo_id, processo_id, position) values(1,1,0)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,3,1)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,4,2)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,5,5)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,6,7)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(3,2,6)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(3,3,3)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(3,4,4)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(4,1,8)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(4,5,9)
+
+
