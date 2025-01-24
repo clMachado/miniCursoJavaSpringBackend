@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.clmDev.dslist_backend.classes.Pessoas;
+import com.clmDev.dslist_backend.classes.Pessoa;
 import com.clmDev.dslist_backend.services.PessoaService;
 
 @RestController
@@ -16,8 +16,8 @@ public class PessoaController {
 	private PessoaService serv;
 	
 	@GetMapping
-	public List<Pessoas> findAll() {
-		List<Pessoas> Pessoas =  serv.findAll();
+	public List<Pessoa> findAll() {
+		List<Pessoa> Pessoas =  serv.findAll();
 		return Pessoas;
 	}
 	

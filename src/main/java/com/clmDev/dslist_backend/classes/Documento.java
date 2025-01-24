@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_docs")
-public class Documentos {
+public class Documento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,12 +39,12 @@ public class Documentos {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public Documentos(Long iD, String descricao, String url) {
+	public Documento(Long iD, String descricao, String url) {
 		ID = iD;
 		this.descricao = descricao;
 		this.url = url;
 	}
-	public Documentos() {
+	public Documento() {
 		super();
 	}
 	@Override
@@ -59,7 +59,7 @@ public class Documentos {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Documentos other = (Documentos) obj;
+		Documento other = (Documento) obj;
 		return Objects.equals(url, other.url);
 	}
 	

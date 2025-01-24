@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_pessoas")
-public class Pessoas {
+public class Pessoa {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -63,11 +63,11 @@ public class Pessoas {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pessoas other = (Pessoas) obj;
+		Pessoa other = (Pessoa) obj;
 		return Objects.equals(CPF_CNPJ, other.CPF_CNPJ);
 	}
 	
-	public Pessoas(Long iD, String nome, String cPF_CNPJ, String telefone, String email) {
+	public Pessoa(Long iD, String nome, String cPF_CNPJ, String telefone, String email) {
 		ID = iD;
 		this.nome = nome;
 		CPF_CNPJ = cPF_CNPJ;
@@ -75,7 +75,7 @@ public class Pessoas {
 		this.email = email;
 	}
 	
-	public Pessoas() {
+	public Pessoa() {
 		super();
 	}
 	

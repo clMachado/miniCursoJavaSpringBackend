@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tb_processos")
-public class Processos {
+public class Processo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -27,12 +27,12 @@ public class Processos {
 	private String descricaoLonga;
 	
 	
-	public Processos() {
+	public Processo() {
 		super();
 	}
 
 
-	public Processos(long id, String nome, String nroProcesso,  String descricaoCurta, String imgUrl, String descricaoLonga) {
+	public Processo(long id, String nome, String nroProcesso,  String descricaoCurta, String imgUrl, String descricaoLonga) {
 		this.id = id;
 		this.nome = nome;
 		this.descricaoCurta = descricaoCurta;
@@ -95,7 +95,7 @@ public class Processos {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Processos other = (Processos) obj;
+		Processo other = (Processo) obj;
 		return Objects.equals(nroProcesso, other.nroProcesso);
 	}
 

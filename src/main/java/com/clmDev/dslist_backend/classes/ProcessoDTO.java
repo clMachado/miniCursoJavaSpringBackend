@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class ProcessosDTO {
+public class ProcessoDTO {
 
 		private long id;
 		private String nome;
@@ -13,11 +13,11 @@ public class ProcessosDTO {
 		private String descricaoCurta;
 		private String imgUrl;
 		
-		public ProcessosDTO() {
+		public ProcessoDTO() {
 			super();
 		}
 
-		public ProcessosDTO(Processos processos) {
+		public ProcessoDTO(Processo processos) {
 			id = processos.getId();
 			nome = processos.getNome();
 			nroProcesso = processos.getNroProcesso();
