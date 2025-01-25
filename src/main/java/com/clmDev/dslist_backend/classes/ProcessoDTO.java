@@ -3,9 +3,6 @@ package com.clmDev.dslist_backend.classes;
 import java.util.Objects;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy;
-
-import jakarta.persistence.*;
 
 
 public class ProcessoDTO {
@@ -32,7 +29,7 @@ public class ProcessoDTO {
 			proc.setDescricaoCurta("PROCESSO NAO ENCONTRADO!!!");
 		}
 	}
-
+	
 
 	public long getId() {
 		return id;

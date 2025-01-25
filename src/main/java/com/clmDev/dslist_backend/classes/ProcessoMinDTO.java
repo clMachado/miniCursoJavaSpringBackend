@@ -1,9 +1,6 @@
 package com.clmDev.dslist_backend.classes;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.clmDev.dslist_backend.projection.ProcessoMinProjection;
 
 public class ProcessoMinDTO {
 
@@ -12,9 +9,10 @@ public class ProcessoMinDTO {
 		private String nroProcesso;
 		private String descricaoCurta;
 		private String imgUrl;
+		private Integer position;
+		
 		
 		public ProcessoMinDTO() {
-			super();
 		}
 
 		public ProcessoMinDTO(Processo processos) {
@@ -24,7 +22,15 @@ public class ProcessoMinDTO {
 			descricaoCurta = processos.getDescricaoCurta();
 			imgUrl = processos.getImgUrl();
 		}
-
+		
+		public ProcessoMinDTO(ProcessoMinProjection proj) {
+			this.id = proj.getId();
+			this.nroProcesso = proj.getNroProcesso();
+			this.nome = proj.getNome();
+			this.descricaoCurta = proj.getDescricaoCurta();
+			this.position = proj.getPosition();
+		}
+		
 		public long getId() {
 			return id;
 		}
@@ -39,6 +45,9 @@ public class ProcessoMinDTO {
 		}
 		public String getImgUrl() {
 			return imgUrl;
+		}
+		public int getPosition() {
+			return position;
 		}
 	
 		

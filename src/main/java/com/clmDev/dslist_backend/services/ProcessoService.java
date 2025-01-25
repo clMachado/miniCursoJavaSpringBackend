@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.clmDev.dslist_backend.classes.Processo;
 import com.clmDev.dslist_backend.classes.ProcessoDTO;
 import com.clmDev.dslist_backend.classes.ProcessoMinDTO;
+import com.clmDev.dslist_backend.projection.ProcessoMinProjection;
 import com.clmDev.dslist_backend.repositories.ProcessoRepository;
 
 @Service
@@ -35,6 +36,15 @@ public class ProcessoService {
 		
 		return proc;
 	}
+	
+	@Transactional(readOnly = true)
+	public List<ProcessoMinDTO> findByList(Long ListId) {
+		
+		List<ProcessoMinProjection> result = repo.searchByList(ListId);
+		
+		return result.stream().map(x -> new ProcessoMinDTO(x)).toList();
+	}
+
 
 
 }
