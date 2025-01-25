@@ -3,6 +3,7 @@ package com.clmDev.dslist_backend.repositories;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import com.clmDev.dslist_backend.classes.Processo;
@@ -16,7 +17,12 @@ public interface ProcessoRepository extends JpaRepository<Processo, Long> {
 			pr.id = bl.processo_id
 			where
 			bl.tipo_id = :tipo_id
-			order by bl.tipo_id
+			order by bl.position
 			""")
 			List<ProcessoMinProjection> searchByList(Long tipo_id); 
+	
+	
+	@Modifying
+	@Query(nativeQuery = true, value = "UPDATE tb_belonging SET position = :newPosition WHERE tipo_id  = :tipo_id AND processo_id = :processo_id")
+	void updateBelongingPosition(Long tipo_id, Long processo_id, int newPosition);
 }

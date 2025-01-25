@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,21 @@ public class ListController {
 	public List<ProcessoMinDTO> findByList(@PathVariable Long listId) {
 		return serv.findByList(listId);
 	}
+	
+	@PostMapping(value = "/reindexProcessos")
+	public void move(Long listId, int sourceIndex, int destinationIndex) {
+		
+		List<ProcessoMinDTO> list = serv.findByList(listId);
+		
+		var min = 0;
+		var max = 1;	
+		
+		
+		
+		
+	}
+	
+	
 	
 
 	

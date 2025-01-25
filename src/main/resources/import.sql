@@ -26,14 +26,15 @@ INSERT INTO TB_TIPOPROCESSO(nome) values('Roubo');
 INSERT INTO TB_TIPOPROCESSO(nome) values('Assalto');
 
 insert into TB_BELONGING(tipo_id, processo_id, position) values(1,1,0)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(2,3,1)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(2,4,2)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(2,5,5)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(2,6,7)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(3,2,6)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(3,3,3)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(3,4,4)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(4,1,8)
-insert into TB_BELONGING(tipo_id, processo_id, position) values(4,5,9)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,3,0)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,4,1)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,5,2)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,6,3)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(2,7,4)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(3,2,0)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(3,3,1)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(3,4,2)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(4,1,0)
+insert into TB_BELONGING(tipo_id, processo_id, position) values(4,5,1)
 
 

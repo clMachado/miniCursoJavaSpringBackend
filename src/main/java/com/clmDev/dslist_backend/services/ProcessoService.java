@@ -39,10 +39,25 @@ public class ProcessoService {
 	
 	@Transactional(readOnly = true)
 	public List<ProcessoMinDTO> findByList(Long ListId) {
+		return repo.searchByList(ListId).stream().map(x -> new ProcessoMinDTO(x)).toList();
+	}
+	
+	@Transactional()
+	public void move(Long listId, int sourceIndex, int destinationIndex) {
 		
-		List<ProcessoMinProjection> result = repo.searchByList(ListId);
+		List<ProcessoMinProjection> list = repo.searchByList(listId);
 		
-		return result.stream().map(x -> new ProcessoMinDTO(x)).toList();
+		ProcessoMinProjection obj = list.remove(sourceIndex); // remove da posicao inicial e guarda em variavel
+		list.add(destinationIndex, obj); // pega da variavel e joga para nova posicao
+		
+		var min = (sourceIndex < destinationIndex ? sourceIndex : destinationIndex);
+		var max = (sourceIndex < destinationIndex ? destinationIndex : sourceIndex);
+		
+		for(int i = min; i<= max; i++) {			
+			repo.updateBelongingPosition(listId, list.get(i).getId(), i);
+		}
+	
+		
 	}
 
 
